@@ -6,72 +6,71 @@
     <link href="images/favicon.png" rel="icon" type="image/png" />
     <link href="css/estilo.css" rel="stylesheet" />
     <title>Cristhian Perez</title>
-    <style>
-        header {
-            background: green;
-        }
-    </style>
-</head>
+ </head>
 <body>
-    <header>
+    <header class="header">
         <div>
-            <figure>
+            <figure class="logo">
 
                 <img src="images/logo.png" alt="logo tutor" />
             </figure>
-            <nav>
+            <nav class="menu">
                 <!--etiqueta menu-->
                 <ol>
                     <!--principal-->
                     <li>
-                        <a href="./portafolio/index.html">Portafolio</a>
+                        <a class="link" href="./portafolio/index.html">Portafolio</a>
                     </li>
                     <li>
-                        <a href="#eventos">experiencia</a>
+                        <a class="link" href="#eventos">experiencia</a>
                     </li>
                     <li>
-                        <a href="#contacto">trabajemos juntos</a>
+                        <a class="link" href="#contacto">trabajemos juntos</a>
                     </li>
 
                 </ol>
             </nav>
         </div>
     </header>
-    <section><h1>Hola! soy <strong>Cristhian Pérez</strong> aprendix de desarrollo web <br />
-        rico saber mas de <strong>Javascript</strong> </h1>
+    <section class="hero">
+        <h1>Hola! soy <strong>Cristhian Pérez</strong> aprendix de desarrollo web <br />
+        rico saber mas de <strong>Javascript</strong>
+        </h1>
              <img src="images/hero.jpg" height="300" width="500" alt="imagen principal del sitio" />
     </section>
-    <section id="portafolio">
+    <section class="portafolio">
         <h2>Portafolio (Proyectos Destacados)</h2>
-        <article>
-            <h3>Proyectos</h3>
-            <h6>Comunnit Manager</h6>
-            <p><small><strong>Fecha:</strong>01/01/2013</small> </p>
-            <p><small><strong>Facebook</strong>www.facebook.com</small> </p>
-            <p>El Community Manager es un profesional de marketing digital responsable de la gestión y desarrollo de la comunidad online de una marca o empresa en el mundo digital. En estas funciones de gestión y desarrollo, debe aumentar la comunidad para detectar a los potenciales clientes y prescriptores.</p>
-            <img src="images/platzi-video-react-native.png" alt="aplicación" width="500" />
+        <article class="project">
+            <h3 class="project-title" >Proyectos</h3>
+            <h6 class="project-course">Comunnit Manager</h6>
+            <p class="porject-date"><small><strong>Fecha:</strong>01/01/2013</small> </p>
+            <p class="project-url"><small><strong>Facebook</strong>www.facebook.com</small> </p>
+            <p class="porject-description">El Community Manager es un profesional de marketing digital responsable de la gestión y desarrollo de la comunidad online de una marca o empresa en el mundo digital. En estas funciones de gestión y desarrollo, debe aumentar la comunidad para detectar a los potenciales clientes y prescriptores.</p>
+            <figure class="project-imagecontainer">
+                <img class="project-image" src="images/platzi-video-react-native.png" alt="aplicación" width="500" />
+            </figure>
         </article>
     </section>
     <section id="eventos">
         <h2>Mas sobre mi experiencia</h2>
-        <article>
-            <figure>
+        <article class="event">
+            <figure class="event-imageContainer">
 
                 <img src="images/platzi-conf.jpg" width="500" alt="Alternate Text" />>
             </figure>
-            <h3>Platziconf Colombia 2019</h3>
-            <p>super evento super chido de platzi</p>
-            <a href="https://www.youtube.com/watch?v=d_Obdtr8ljE" target="_blank">ver platica</a>
+            <h3 class="event-title">Platziconf Colombia 2019</h3>
+            <p class="event-descripcion">super evento super chido de platzi</p>
+            <a class="event-url" href="https://www.youtube.com/watch?v=d_Obdtr8ljE" target="_blank">ver platica</a>
         </article>
     </section>
-    <section id="contacto">
-        <form action="/suscripcion">
+    <section id="contacto" class="contact">
+        <form action="/suscripcion" class="form-email">
             <h3>Creamos algo juntos</h3>
             <input type="email" placeholder="Déjame tu email" id="email" />
             <button>enviar</button>
         </form>
     </section>
-    <footer>footer</footer>
+    <footer class="footer">footer</footer>
 
 </body>
 </html>

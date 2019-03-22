@@ -1,6 +1,7 @@
 body {
     font-family:'Source Sans Pro', sans-serif;
     margin:0;
+  
 
 }
 h1, h2, h3, h4, h5, h6{
@@ -26,6 +27,7 @@ h1 {
     background:#fafafa;
 }
 .project {
+    display:flex;/*propiedad para ubicar los elementos en un etiqueta block inlen felex*/
     background: white;
     border: 1px solid gray;
     border-radius: 10px; /*bordes redondeados*/
@@ -47,13 +49,31 @@ h1 {
 }
 
 .header {
+    display:flex;
     background-color: #1b2127; /*color fondo*/
-    color: white; /*color texto*/wit
-
+    color: white; /*color texto*/
+    justify-content:space-between;
+    height:90px;
 }
-.header a {
+.menu{
+    height:inherit;
+}
+
+ .header ol {
+    display:flex;
+    height:inherit;
+    }
+  .header ol li {
+    height:inherit;
+    }
+
+ 
+ .header a {
+        display:flex;
         color: white;
-        text-decoration:none;
+        text-decoration: none;
+        align-items:center;
+        padding:0 10px;
     }
 .hero {
     height: 300px;
@@ -63,3 +83,32 @@ h1 {
     background-repeat: no-repeat; /*que no se repita*/
     background-position-x: right; /*mover imagen por picel*/
 }
+.flexbox {
+    display: flex; 
+    height:300px;/*ubica autimaticamente los elementos horizontal*/
+    /*flex-direction:column; /*alinea los elementos en columna  */
+    /*flex-wrap:nowrap;//es una propiedad del padre para contiunar los de forma horizonta por defecto esta activo*/
+    flex-wrap: wrap; /*hace que los elementos que no caben dentro de pantalla caigan verticalmente*/
+    justify-content: center; /*ayuda a expaciar automaticamente los elemento space-evenly toma espaciado para cada lado*/
+    align-items:center;/*alinea elementos cualquier lado del elemnto*/
+}
+.box {
+    width:50px;
+    height:50px;
+    margin:10px;
+    border: 1px solid red;
+    /*align-self propiedad de los hijos de display flex alineate a ti mismo*/
+    /*flex-shrink:0;/*es una propiedad del display flex del hijo que le dice que no se contraigao se estire va de 0-1*/
+}
+ol,
+ul {
+    
+    margin:0px;
+    padding:0px;
+    list-style:none;
+}
+
+figure {
+    margin:0px
+}
+    

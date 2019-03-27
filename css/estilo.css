@@ -109,13 +109,18 @@ h2 {
 .hero {
     display:flex;
     height: 300px;
-    background-image: url('../images/hero.jpg');
+   /* background-image: url('../images/hero.jpg');*/
     background-color: #1b2127; /*color fondo*/
-    background-size: 500px 300px; /*tampo imagen ancho y alto*/
-    background-repeat: no-repeat; /*que no se repita*/
+   /* background-size: 500px 300px; /*tampo imagen ancho y alto*/
+    /*background-repeat: no-repeat; /*que no se repita*/
     background-position-x: right; /*mover imagen por picel*/
     align-items:center;
-    padding:0 20px;
+    /*padding:0 20px;*/
+    justify-content:space-between;
+
+}
+.hero-image{
+    object-fit:cover; /*mantiene la proporcion de las imagenes*/
 }
 .flexbox {
     display: flex; 
@@ -147,6 +152,7 @@ figure {
 }
 .event-list{
     display:flex;
+    flex-wrap:wrap;
 
 }
 
@@ -200,4 +206,65 @@ figure {
 .footer a {
     color:white
 }
+.contact {
+    background-color: #056fff;
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social {
+}
+.social-link {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    background-size: 50px 50px;
+    margin:0 10px;
     
+}
+.social-link.twitter{/*estsa classes se identifican cuando en los elemntos tienen dos class ingresadas al mismo tiempo*/
+    background-image:url(../images/twitter.svg);
+}.social-link.github{/*estsa classes se identifican cuando en los elemntos tienen dos class ingresadas al mismo tiempo*/
+    background-image:url(../images/github.svg);
+}.social-link.facebook{/*estsa classes se identifican cuando en los elemntos tienen dos class ingresadas al mismo tiempo*/
+    background-image:url(../images/facebook.svg);
+}.social-link.instagram{/*estsa classes se identifican cuando en los elemntos tienen dos class ingresadas al mismo tiempo*/
+    background-image:url(../images/instagram.svg);
+}
+.form-email input {
+    border-color: gray;
+    padding: 10px 20px 10px 25px;
+    border-style: solid;
+    border-radius: 5px;
+    background-image: url(../images/envelope.svg);
+    background-size:15px 15px;
+    background-repeat: no-repeat;
+    background-position-y:center;
+    background-position-x:5px;
+    border-radius:5px;
+
+}
+.form-email button {
+    display: block;
+    background: transparent;
+    border-style: solid;
+    color: white;
+    padding: 10px 0;
+    border-radius: 5px;
+    width: 100px;
+    margin-top: 10px;
+}
+.form-email h3 {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+.container{
+    width:1000px;
+    margin:0 auto;
+    display:inherit;
+    justify-content:inherit;
+    align-items:inherit;
+    height:inherit;
+    flex-wrap:inherit;
+        }

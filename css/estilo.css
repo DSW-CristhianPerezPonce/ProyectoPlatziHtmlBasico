@@ -164,8 +164,8 @@ figure {
 
 
 .event {
-    margin: 10px;
-    width: 480px;
+    margin: 1%;
+    width: 48%;
    /* border: 1px solid red;*/
     border-radius: 10px;
     flex-shrink:0;
@@ -329,6 +329,17 @@ figure {
     }
     .project-description {
         font-size: 0.8em;
+    }
+    .event {
+        width:auto;
+        flex-shrink:initial;
+    }
+    .event img{
+        width:100%;
+    }
+    .event-detail{
+        margin:-2em 10px 10px 10px;
+        padding:1em;
     }
 
    

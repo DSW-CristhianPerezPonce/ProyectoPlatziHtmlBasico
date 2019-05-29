@@ -348,7 +348,27 @@ figure {
     .project-details {
        font-size: 10px;
     }
+    .contact{
+        width:auto;
+        height:auto;
+        padding:1.5em 0;
+        text-align:center;
+        display:block; /*text aling no funciona con flex*/
+    }
+    .form-email button{
+        margin: 1em auto;
+    }
+    .form-email h3{
+        margin-top:0;
+    }
+    .footer{
+        display:block;
+        text-align:center;
+        border:1px solid transparent;
+    }
 }
+
+
 @media screen and (max-width:320px) {
 
 }

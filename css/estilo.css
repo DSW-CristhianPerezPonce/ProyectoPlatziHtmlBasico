@@ -279,13 +279,39 @@ figure {
         }
 /*media queriess primero desde el mas grande MQ*/
 @media screen and (max-width:1024px) {
+    .container {
+        padding:  0 1em;
+    }
+    .hero {
+        height: auto;
+        position:relative;
+        overflow:hidden; /*que oculte todos los elementos por fuera del hijo*/
+        padding:2em;
+    }
+
+    h1 {
+        font-size: 2em;
+        z-index: 2;
+    }
+
+    .hero-image {
+        position: absolute;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        width:100%;
+    }
 
 }
 @media screen and (max-width:767px) {
+  
     .header{
         display:block;
         height:auto;
     }
+
     .header ol{
         display:block;
     }
@@ -345,6 +371,10 @@ figure {
    
 }
 @media screen and (max-width:480px) {
+    h1 {
+        font-size: 1.5em;
+        margin-left:2em;
+    }
     .project-details {
        font-size: 10px;
     }
@@ -370,5 +400,12 @@ figure {
 
 
 @media screen and (max-width:320px) {
+h1{
+    font-size:1.1em;
+}
+.hero{
+    padding:1em 2em;
+}
+
 
 }

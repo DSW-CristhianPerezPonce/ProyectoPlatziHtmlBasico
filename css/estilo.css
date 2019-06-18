@@ -277,6 +277,10 @@ figure {
     height:inherit;
     flex-wrap:inherit;
         }
+.html-video{
+    width:100%;
+    height:auto;
+}
 /*media queriess primero desde el mas grande MQ*/
 @media screen and (max-width:1024px) {
     .container {

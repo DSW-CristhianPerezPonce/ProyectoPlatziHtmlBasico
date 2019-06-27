@@ -281,6 +281,20 @@ figure {
     width:100%;
     height:auto;
 }
+/*Adecuando el menu hamburguesa*/
+.burger-button {
+    width: 40px;
+    height: 40px;
+    background-color: rgba(0,0,0,.8);
+    border-radius: 50%;
+    display: none;
+    text-align: center;
+    position: fixed;
+    z-index: 4;
+    left: 5px;
+    top: 5px;
+    color: white;
+}
 /*media queriess primero desde el mas grande MQ*/
 @media screen and (max-width:1024px) {
     .container {
@@ -325,11 +339,32 @@ figure {
     }
     .header a{
         justify-content:center;
-        height:50px;
+        height:40px;
+        font-size:2em;
+        text-decoration:underline;
+        margin-bottom:.5em;
+
        
     }
     .header .logo{
         text-align:center;
+    }
+    .menu{
+        position:fixed;
+        background:rgba(5,111,255,.9);
+        z-index:3;
+        top:0;
+        left:-100vw;/*ESCONDE LOS ELEMENTOS A LA IZQUIERDA*/
+        width:100vw; /*ViewPort toma el ancho de la pantalla visible*/
+        bottom:0;
+        display:flex;
+        align-items:center;
+        justify-content: center;
+        transition:.3s;
+
+    }
+    .menu.is-active{ /*cuando estan puesta los elementos css segudidos por puntos indica que funciona si y solo si estan juntos*/
+         left:0;
     }
     .project {
         display: block;
@@ -371,9 +406,17 @@ figure {
         margin:-2em 10px 10px 10px;
         padding:1em;
     }
+    /*Adecuando el menu hamburguesa*/
+    .burger-button {
+      display: block;
+       
+    }
+
+
 
    
 }
+
 @media screen and (max-width:480px) {
     h1 {
         font-size: 1.5em;
@@ -402,7 +445,38 @@ figure {
     }
 }
 
+/*iconos para poner response menu*/
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon.eot?tm2azp');
+    src: url('../fonts/icomoon.eot?tm2azp#iefix') format('embedded-opentype'), 
+        url('../fonts/icomoon.ttf?tm2azp') format('truetype'), 
+        url('../fonts/icomoon.woff?tm2azp') format('woff'),
+        url('../fonts/icomoon.svg?tm2azp#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
 
+[class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-menu:before {
+    content: "\e900";
+    line-height:40px;
+
+}
+/*termina ahi*/
 @media screen and (max-width:320px) {
 h1{
     font-size:1.1em;

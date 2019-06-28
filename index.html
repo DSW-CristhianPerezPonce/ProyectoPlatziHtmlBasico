@@ -9,9 +9,10 @@
     <meta name="viewport" content="width=divice-width, initial-scale=1" /><!--hace que adapte a la pantalal que se esta usando-->
 
     <title>Cristhian Perez</title>
+
  </head>
 <body>
-    <i class="icon-menu burger-button"></i>
+    <i class="icon-menu burger-button" id="burger-menu"></i>
     <header class="header">
         <div class="container">
 
@@ -80,7 +81,7 @@
     <div class="container">
         <h2 class="event-list-title">Mas sobre mi experiencia</h2>
     </div>
-   
+
     <section id="eventos" class="event-list">
         <div class="container">
 
@@ -154,32 +155,68 @@
 
     </section>
     <section id="contacto" class="contact">
-    <div class="container">
-        <form action="/suscripcion" class="form-email">
-        <h3>Creamos algo juntos</h3>
-        <input type="email" placeholder="Déjame tu email" id="email" />
-        <button>enviar</button>
+        <div class="container">
+            <form action="/suscripcion" class="form-email">
+                <h3>Creamos algo juntos</h3>
+                <input type="email" placeholder="Déjame tu email" id="email" />
+                <button>enviar</button>
 
-        </form>
-        <div class="social">
-            <a href="https://twitter.com/cristhianperezp" class="social-link twitter"></a>
-            <a href="https://github.com/cperezponce/" class="social-link github"></a>
-            <a href="https://www.facebook.com/cperezponce" class="social-link facebook"></a>
-        <a href="https://www.instagram.com/cperezponce/" class="social-link instagram"></a>
+            </form>
+            <div class="social">
+                <a href="https://twitter.com/cristhianperezp" class="social-link twitter"></a>
+                <a href="https://github.com/cperezponce/" class="social-link github"></a>
+                <a href="https://www.facebook.com/cperezponce" class="social-link facebook"></a>
+                <a href="https://www.instagram.com/cperezponce/" class="social-link instagram"></a>
+            </div>
         </div>
-    </div>
     </section>
     <footer class="footer">
         <div class="container">
-        <div>
-        <p>Curso de Desarrollo web online 2019 <img src="images/platzi.png" alt="Platzi" width="80" />
-        </p>
-        </div>
-        <div>
-        <p>Disign whit  by <a href="https://www.twitter.com/cristhianperezp">Marucho</a></p>
-        </div>
+            <div>
+                <p>
+                    Curso de Desarrollo web online 2019 <img src="images/platzi.png" alt="Platzi" width="80" />
+                </p>
+            </div>
+            <div>
+                <p>Disign whit  by <a href="https://www.twitter.com/cristhianperezp">Marucho</a></p>
+            </div>
         </div>
     </footer>
+    <script>
+
+        const ipad = window.matchMedia('screen and (max-width:767px)')
+        const menu = document.querySelector('.menu');
+        //console.log(menu);
+        const burgerButton = document.querySelector('#burger-menu');
+        //console.log(burgerButton);
+        ipad.addListener(validation)
+        function validation(event) { /*para prender y apagar escuchadores para optimizar recursos*/
+            if (event.matches) {
+                
+                burgerButton.addEventListener('click', hideShow);
+                
+
+            }
+            else {
+                burgerButton.removeEventListener('click', hideShow);
+
+            }
+
+        }
+        function hideShow() {
+            if (menu.classList.contains('is-active')) {/* se pregunta si el menu esta activo*/
+                menu.classList.remove('is-active');  /*funcion de remover la clase de elementos*/
+
+            }
+            else {
+                menu.classList.add('is-active');  /*funcion de adionar elemntos la clase de elementos*/
+
+            }
+
+        }
+       
+
+    </script>
 
 </body>
 </html>
